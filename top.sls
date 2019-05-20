@@ -1,3 +1,3 @@
 base:
-  'TEST*':
+  'DESK*':
     - _config_pc
