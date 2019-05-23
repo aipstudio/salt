@@ -1,0 +1,11 @@
+Get-AppPackage -AllUsers Microsoft.LanguageExperiencePackru*
+Remove-AppPackage -AllUsers Microsoft.LanguageExperiencePackru*
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\WindowsStore" /v "RemoveWindowsStore" /t "REG_DWORD" /d "1"
+reg add "HKLM\SOFTWARE\Policies\Microsoft\WindowsStore" /v "DisableStoreApps" /t "REG_DWORD" /d "1"
+reg add "HKLM\SOFTWARE\Policies\Microsoft\WindowsStore" /v "AutoDownload" /t "REG_DWORD" /d "1"
+
+wmic path softwarelicensingservice get OA3xOriginalProductKeysal
+slmgr /upk
+slmgr /rearm
+slmgr /ipk $KEY
