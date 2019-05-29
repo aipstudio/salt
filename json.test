@@ -1,0 +1,16 @@
+{
+    "DESKTOP-5LNAU4T.apteka.aprel": {
+        "file_|-Copy directory recursive sysadmin_|-c:\\sysadmin utilites_|-recurse": {
+            "comment": "The directory c:\\sysadmin utilites is in the correct state",
+            "pchanges": {},
+            "name": "c:\\sysadmin utilites",
+            "start_time": "17:01:37.072626",
+            "__id__": "Copy directory recursive sysadmin",
+            "duration": 4685.971,
+            "__run_num__": 0,
+            "__sls__": "copy_dir_sysadmin",
+            "changes": {},
+            "result": true
+        }
+    }
+}

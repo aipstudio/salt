@@ -1,5 +1,10 @@
-salt ob_lenovo13u.apteka.aprel state.apply _config_pc
-salt ob_lenovo3u.apteka.aprel cmd.run "shutdown /s /t 5"
+salt TEST* state.apply _config_pc
+salt TEST* cmd.run "shutdown /s /t 5"
+salt TEST* cmd.run 'sc stop salt-minion'
 salt TEST* cmd.run 'wmic product where "Name like "%Visual%"" get name,version /format:csv > c:\aprel\list_soft.csv'
 salt TEST* cmd.run 'wmic product where "Name like "%Visual%"" get name,version'
 salt TEST* cmd.run 'more c:\aprel\list_soft.csv'
+
+salt-run jobs.active
+salt TEST* saltutil.kill_job 20190424091458079884
+salt-run jobs.list_job 20190529150648686690

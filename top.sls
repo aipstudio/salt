@@ -1,5 +1,5 @@
 base:
   '1*':
-    - _config_pc
+    - install_vnc
   'DESK*':
-    - copy_dir_starter
+    - _config_pc
