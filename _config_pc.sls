@@ -12,3 +12,4 @@ include:
   - install_openoffice
   #- install_drvfr
   - install_net
+  - delete_files
