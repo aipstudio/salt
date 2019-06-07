@@ -1,3 +1,6 @@
+cd C:\Windows\System32\Sysprep
+sysprep /generalize /oobe /unattend:C:\Intel\au.xml
+
 Get-AppPackage -AllUsers Microsoft.LanguageExperiencePackru*
 Remove-AppPackage -AllUsers Microsoft.LanguageExperiencePackru*
 
@@ -9,3 +12,6 @@ wmic path softwarelicensingservice get OA3xOriginalProductKeysal
 slmgr /upk
 slmgr /rearm
 slmgr /ipk $KEY
+
+Export-StartLayout –path c:\Start.xml
+Export-StartLayout -UseDesktopApplicationID -Path c:\layout.xml
