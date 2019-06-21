@@ -15,3 +15,7 @@ slmgr /ipk $KEY
 
 Export-StartLayout –path c:\Start.xml
 Export-StartLayout -UseDesktopApplicationID -Path c:\layout.xml
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU
+UseWUServer 0 DWORD
+restart Центр обновлений
