@@ -8,7 +8,7 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\WindowsStore" /v "RemoveWindowsStore" 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\WindowsStore" /v "DisableStoreApps" /t "REG_DWORD" /d "1"
 reg add "HKLM\SOFTWARE\Policies\Microsoft\WindowsStore" /v "AutoDownload" /t "REG_DWORD" /d "1"
 
-wmic path softwarelicensingservice get OA3xOriginalProductKeysal
+wmic path softwarelicensingservice get OA3xOriginalProductKey
 slmgr /upk
 slmgr /rearm
 slmgr /ipk $KEY
