@@ -7,6 +7,7 @@ include:
   - copy_dir_starter
   - config_lgpo
   - config_restore
+  - config_firewall
   - remove_appx
   - install_vnc
   - install_openoffice
