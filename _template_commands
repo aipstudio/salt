@@ -6,6 +6,8 @@ salt TEST* cmd.run 'wmic product where "Name like "%Visual%"" get name,version /
 salt TEST* cmd.run 'wmic product where "Name like "%Visual%"" get name,version'
 salt TEST* cmd.run 'more c:\aprel\list_soft.csv'
 
+salt DESKTOP-5LNAU4T.apteka.aprel lgpo.get_policy_info "Текущая схема управления питанием" machine
+
 salt-run jobs.active
 salt TEST* saltutil.kill_job 20190424091458079884
 salt-run jobs.list_jobs

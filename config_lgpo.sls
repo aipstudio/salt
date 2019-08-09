@@ -15,6 +15,9 @@ Local group policy machine:
             Текущая схема управления питанием: Высокая производительность
         Отключить дисплей (питание от сети):
             Отключить дисплей (в секундах): 1800
+        ActiveHours:
+            ActiveHoursStartTime: "07:00"
+            ActiveHoursEndTime: "22:00"
     - policy_class: machine
     - adml_language: ru-RU
     {% endif %}
@@ -33,3 +36,7 @@ update regedit UAC:
     - vname: EnableLUA
     - vdata: 1
     - vtype: REG_DWORD
+
+update regedit AutoEndTask:
+  cmd.run:
+    - name: reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /f /v AutoEndTask /t REG_SZ /d 1
